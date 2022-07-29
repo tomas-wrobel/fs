@@ -59,7 +59,7 @@
 
 <span class="returntype"><a href="https://api.dart.dev/stable/2.17.6/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../fs.html/File-class.html">File</a></span>&gt;</span></span>
 <span class="name ">writeAsString</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="writeAsString-param-contents"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-core/String-class.html">String</a></span> <span class="parameter-name">contents</span>, </span></li>
-<li><span class="parameter" id="writeAsString-param-mode">{<span class="type-annotation">dynamic</span> <span class="parameter-name">mode</span> = <span class="default-value">FileMode.write</span>, </span></li>
+<li><span class="parameter" id="writeAsString-param-mode">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-io/FileMode-class.html">FileMode</a></span> <span class="parameter-name">mode</span> = <span class="default-value">FileMode.write</span>, </span></li>
 <li><span class="parameter" id="writeAsString-param-encoding"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-convert/Encoding-class.html">Encoding</a></span> <span class="parameter-name">encoding</span> = <span class="default-value">utf8</span>, </span></li>
 <li><span class="parameter" id="writeAsString-param-flush"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">flush</span> = <span class="default-value">false</span>}</span></li>
 </ol>)
@@ -85,7 +85,7 @@ flushed to the file system before the returned future completes.</p>
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">@override
-Future&lt;File&gt; writeAsString(String contents, {dynamic mode = FileMode.write, Encoding encoding = utf8, bool flush = false}) async {
+Future&lt;File&gt; writeAsString(String contents, {uber.FileMode mode = FileMode.write, Encoding encoding = utf8, bool flush = false}) async {
 	return writeAsBytes(encoding.encode(contents), mode: mode, flush: flush);
 }</code></pre>
 </section>
@@ -187,7 +187,7 @@ Future&lt;File&gt; writeAsString(String contents, {dynamic mode = FileMode.write
 <footer>
   <span class="no-break">
     fs
-      1.0.0
+      1.0.1
   </span>
 
   

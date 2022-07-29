@@ -67,15 +67,19 @@
 <p>And then a little bit complicated import:</p>
 <pre class="language-dart"><code class="language-dart">import 'package:fs/io.dart' if (dart.library.html) 'package:fs/html.dart';
 </code></pre>
-<p>I do not recommend the opposite way:</p>
-<pre class="language-dart"><code class="language-dart">// BAD
-import 'package:fs/html.dart' if (dart.library.io) 'package:fs/io.dart';
+<p>or the opposite way:</p>
+<pre class="language-dart"><code class="language-dart">import 'package:fs/html.dart' if (dart.library.io) 'package:fs/io.dart';
 </code></pre>
-<p>for two reason:</p>
+<h2 id="aditional-information">Aditional information</h2>
+<p>This package was created because I needed some cross-platform solution for our <a href="https://github.com/vise-maps/app">future app</a>.
+I found <a href="https://pub.dev/packages/universal_io">universal_io</a>. But there are two issues: the package does not seem to be
+mantained, and mainly – it does not work (on web). There are opened issues for a year without a response.</p>
+<p>Also that package has just copied code from Dart SDK (and has used <code>IOOverrides</code>) which is the worst possible way to use localStorage I would say:</p>
 <ol>
-<li>It won't import documentation in your IDE, because the <code>html.dart</code> is not documented, since it mirrors <code>dart:io</code></li>
-<li>It will import types incompatible with the original ones. An example:</li>
+<li>Dart SDK changes almost everyday and after a stable release, the code must be re-copied and re-edited</li>
+<li>The code will be big because of the <code>dart:io</code> library size. Why to include it twice?</li>
 </ol>
+<p>Well, I encourage you to fork this package, come with wider support; and meanwhile, I'll try to get some answers from the maintainers of <code>universal_io</code>.</p>
 </section>
 
 
@@ -130,7 +134,7 @@ import 'package:fs/html.dart' if (dart.library.io) 'package:fs/io.dart';
 <footer>
   <span class="no-break">
     fs
-      1.0.0
+      1.0.1
   </span>
 
   

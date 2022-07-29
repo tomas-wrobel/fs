@@ -59,7 +59,7 @@
 
 <span class="returntype"><a href="https://api.dart.dev/stable/2.17.6/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../../fs.html/File-class.html">File</a></span>&gt;</span></span>
 <span class="name ">writeAsBytes</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="writeAsBytes-param-bytes"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.17.6/dart-core/int-class.html">int</a></span>&gt;</span></span> <span class="parameter-name">bytes</span>, </span></li>
-<li><span class="parameter" id="writeAsBytes-param-mode">{<span class="type-annotation">dynamic</span> <span class="parameter-name">mode</span> = <span class="default-value">FileMode.write</span>, </span></li>
+<li><span class="parameter" id="writeAsBytes-param-mode">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-io/FileMode-class.html">FileMode</a></span> <span class="parameter-name">mode</span> = <span class="default-value">FileMode.write</span>, </span></li>
 <li><span class="parameter" id="writeAsBytes-param-flush"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">flush</span> = <span class="default-value">false</span>}</span></li>
 </ol>)
 
@@ -84,7 +84,7 @@ flushed to the file system before the returned future completes.</p>
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">@override
-Future&lt;File&gt; writeAsBytes(List&lt;int&gt; bytes, {dynamic mode = FileMode.write, bool flush = false}) {
+Future&lt;File&gt; writeAsBytes(List&lt;int&gt; bytes, {uber.FileMode mode = FileMode.write, bool flush = false}) {
 	writeAsBytesSync(bytes, mode: mode, flush: flush);
 	return Future.value(this);
 }</code></pre>
@@ -187,7 +187,7 @@ Future&lt;File&gt; writeAsBytes(List&lt;int&gt; bytes, {dynamic mode = FileMode.
 <footer>
   <span class="no-break">
     fs
-      1.0.0
+      1.0.1
   </span>
 
   

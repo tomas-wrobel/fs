@@ -59,7 +59,7 @@
 
 <span class="returntype">void</span>
 <span class="name ">writeAsBytesSync</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="writeAsBytesSync-param-bytes"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.17.6/dart-core/int-class.html">int</a></span>&gt;</span></span> <span class="parameter-name">bytes</span>, </span></li>
-<li><span class="parameter" id="writeAsBytesSync-param-mode">{<span class="type-annotation">dynamic</span> <span class="parameter-name">mode</span> = <span class="default-value">FileMode.write</span>, </span></li>
+<li><span class="parameter" id="writeAsBytesSync-param-mode">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-io/FileMode-class.html">FileMode</a></span> <span class="parameter-name">mode</span> = <span class="default-value">FileMode.write</span>, </span></li>
 <li><span class="parameter" id="writeAsBytesSync-param-flush"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">flush</span> = <span class="default-value">false</span>}</span></li>
 </ol>)
 
@@ -83,7 +83,7 @@ flushed to the file system before returning.</p>
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">@override
-void writeAsBytesSync(List&lt;int&gt; bytes, {dynamic mode = FileMode.write, bool flush = false}) {
+void writeAsBytesSync(List&lt;int&gt; bytes, {uber.FileMode mode = FileMode.write, bool flush = false}) {
 	window.localStorage[&#39;${absolute.uri}&#39;] = bytes.join(&#39;-&#39;);
 }</code></pre>
 </section>
@@ -185,7 +185,7 @@ void writeAsBytesSync(List&lt;int&gt; bytes, {dynamic mode = FileMode.write, boo
 <footer>
   <span class="no-break">
     fs
-      1.0.0
+      1.0.1
   </span>
 
   

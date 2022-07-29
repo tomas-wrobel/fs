@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the existsSync method from the FileSystemEntity class, for the Dart programming language.">
-  <title>existsSync method - FileSystemEntity class - fs.html library - Dart API</title>
+  <meta name="description" content="API docs for the absolute property from the FileSystemEntity class, for the Dart programming language.">
+  <title>absolute property - FileSystemEntity class - fs.html library - Dart API</title>
 
 
   
@@ -32,9 +32,9 @@
     <li><a href="../../index.html">fs</a></li>
     <li><a href="../../fs.html/fs.html-library.html">fs.html</a></li>
     <li><a href="../../fs.html/FileSystemEntity-class.html">FileSystemEntity</a></li>
-    <li class="self-crumb">existsSync method</li>
+    <li class="self-crumb">absolute property</li>
   </ol>
-  <div class="self-name">existsSync</div>
+  <div class="self-name">absolute</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
@@ -45,46 +45,39 @@
 
   <div id="dartdoc-main-content" class="main-content">
       <div>
-<h1><span class="kind-method">existsSync</span> method 
+<h1><span class="kind-property">absolute</span> property 
     <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
 </h1></div>
 
-    <section class="multi-line-signature">
-      
-<div>
-  <ol class="annotation-list">
-    <li>@<a href="https://api.dart.dev/stable/2.17.6/dart-core/override-constant.html">override</a></li>
-  </ol>
-</div>
 
-<span class="returntype"><a href="https://api.dart.dev/stable/2.17.6/dart-core/bool-class.html">bool</a></span>
-<span class="name ">existsSync</span>(<wbr>)
+        
+<section id="getter">
 
-      <div class="features">override</div>
+<section class="multi-line-signature">
+  <span class="returntype"><a href="../../fs.html/FileSystemEntity-class.html">FileSystemEntity</a></span>
+  <span class="name ">absolute</span>
+  <div class="features">override</div>
 
-    </section>
-    
-<section class="desc markdown">
-  <p>Synchronously checks whether the file system entity with this path
-exists.</p>
-<p>Since <a href="https://api.dart.dev/stable/2.17.6/dart-io/FileSystemEntity-class.html">FileSystemEntity</a> is abstract, every <a href="https://api.dart.dev/stable/2.17.6/dart-io/FileSystemEntity-class.html">FileSystemEntity</a> object
-is actually an instance of one of the subclasses <a href="https://api.dart.dev/stable/2.17.6/dart-io/File-class.html">File</a>,
-<a href="https://api.dart.dev/stable/2.17.6/dart-io/Directory-class.html">Directory</a>, and <a href="https://api.dart.dev/stable/2.17.6/dart-io/Link-class.html">Link</a>.  Calling <a href="../../fs.html/FileSystemEntity/existsSync.html">existsSync</a> on an instance of
-one of these subclasses checks whether the object exists in the
-file system object exists and is of the correct type (file,
-directory, or link).  To check whether a path points to an object
-on the file system, regardless of the object's type, use the
-<a href="../../fs.html/FileSystemEntity/typeSync.html">typeSync</a> static method.</p>
 </section>
 
 
-    
+<section class="desc markdown">
+  <p>A <a href="https://api.dart.dev/stable/2.17.6/dart-io/FileSystemEntity-class.html">FileSystemEntity</a> whose path is the absolute path of <a href="../../fs.html/FileSystemEntity/path.html">path</a>.</p>
+<p>The type of the returned instance is the same as the type of
+this entity.</p>
+<p>A file system entity with an already absolute path
+(as reported by <a href="../../fs.html/FileSystemEntity/isAbsolute.html">isAbsolute</a>) is returned directly.
+For a non-absolute path, the returned entity is absolute (<a href="../../fs.html/FileSystemEntity/isAbsolute.html">isAbsolute</a>)
+<em>if possible</em>, but still refers to the same file system object.</p>
+</section>
+
+
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">@override
-bool existsSync() {
-	return window.localStorage[&#39;${absolute.uri}&#39;] != null;
-}</code></pre>
+FileSystemEntity get absolute;</code></pre>
+</section>
+
 </section>
 
 
@@ -101,7 +94,7 @@ bool existsSync() {
   <li><a href="../../index.html">fs</a></li>
   <li><a href="../../fs.html/fs.html-library.html">fs.html</a></li>
   <li><a href="../../fs.html/FileSystemEntity-class.html">FileSystemEntity</a></li>
-  <li class="self-crumb">existsSync method</li>
+  <li class="self-crumb">absolute property</li>
 </ol>
 
 
