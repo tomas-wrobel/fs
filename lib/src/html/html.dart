@@ -23,22 +23,12 @@ library fs.html;
 
 
 import '../io/io.dart' if (dart.library.html) 'io_empty.dart' as uber;
-import '../stub.dart' as uber;
 import 'dart:typed_data';
 import 'dart:convert';
 import 'dart:async';
 import 'dart:html';
 
-class _FileSystemUtils implements uber.FileSystemUtils {
-	@override
-	Future<Directory> getApplicationDocumentsDirectory() {
-		return Future.value(Directory(''));
-	}
-
-	Uri current = Uri.parse('/');
-}
-
-final utils = _FileSystemUtils();
+Uri _current = Uri.parse('/');
 
 abstract class FileSystemEntity implements uber.FileSystemEntity {
 	@override
@@ -57,7 +47,7 @@ abstract class FileSystemEntity implements uber.FileSystemEntity {
 	FileSystemEntity(this.uri);
 
 	static FileSystemEntityType typeSync(String path) {
-		switch (window.localStorage['${utils.current.resolve(path)}']) {
+		switch (window.localStorage['${_current.resolve(path)}']) {
 			case '{dir}': return FileSystemEntityType.directory;
 			case null: return FileSystemEntityType.notFound;
 			default: return FileSystemEntityType.file;
@@ -360,12 +350,12 @@ class Directory extends FileSystemEntity implements uber.Directory {
 	Directory._(Uri uri) : super(uri);
 	
 	@override
-	Directory get absolute => Directory._(utils.current.resolveUri(uri));
+	Directory get absolute => Directory._(_current.resolveUri(uri));
 
-	static Directory get current => Directory._(utils.current);
+	static Directory get current => Directory._(_current);
 
 	static set current(Directory value) {
-		utils.current = utils.current.resolveUri(value.uri);
+		_current = _current.resolveUri(value.uri);
 	}
 
 	@override
@@ -464,7 +454,7 @@ class File extends FileSystemEntity implements uber.File {
 	File._(Uri uri) : super(uri);
 	
 	@override
-	File get absolute => File._(utils.current.resolveUri(uri));
+	File get absolute => File._(_current.resolveUri(uri));
 	
 	@override
 	Future<File> create({bool recursive = false}) {

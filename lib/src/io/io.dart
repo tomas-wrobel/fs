@@ -12,18 +12,3 @@ export 'dart:io' show
 	File, FileSystemEntity, FileSystemEntityType, FileStat, 
 	FileMode, FileSystemEvent, FileSystemException, Directory,  
 	FileSystemCreateEvent, FileSystemDeleteEvent, FileSystemMoveEvent;
-
-import 'package:path_provider/path_provider.dart' as pp;
-import 'dart:io' show Directory;
-import '../stub.dart' as uber;
-
-class _FileSystemUtils implements uber.FileSystemUtils {
-	_FileSystemUtils();
-
-	@override
-	Future<Directory> getApplicationDocumentsDirectory() {
-		return pp.getApplicationDocumentsDirectory();
-	}
-}
-
-final utils = _FileSystemUtils();
