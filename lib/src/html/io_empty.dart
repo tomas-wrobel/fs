@@ -1,4 +1,3 @@
-export '../stub.dart';
 abstract class File {}
 abstract class FileSystemEntity {}
 abstract class FileSystemEntityType {}
