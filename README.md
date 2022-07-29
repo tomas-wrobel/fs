@@ -37,10 +37,3 @@ import 'package:fs/html.dart' if (dart.library.io) 'package:fs/io.dart';
 for two reason:
 1. It won't import documentation in your IDE, because the `html.dart` is not documented, since it mirrors `dart:io`
 2. It will import types incompatible with the original ones. An example:
-
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
