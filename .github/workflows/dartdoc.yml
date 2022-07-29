@@ -12,7 +12,7 @@ jobs:
       - name: Install dependencies
         run: dart pub get
       - name: Generate docs
-        run: dart doc . --auto-include-dependencies --output docs
+        run: dart doc . --output=docs
       - name: Using custom domains
         run: echo "fs.vise.sbs" >> docs/CNAME
       - uses: stefanzweifel/git-auto-commit-action@v4
