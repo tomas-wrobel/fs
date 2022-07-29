@@ -27,13 +27,20 @@ And then a little bit complicated import:
 import 'package:fs/io.dart' if (dart.library.html) 'package:fs/html.dart';
 ```
 
-I do not recommend the opposite way:
+or the opposite way:
 
 ```dart
-// BAD
 import 'package:fs/html.dart' if (dart.library.io) 'package:fs/io.dart';
 ```
 
-for two reason:
-1. It won't import documentation in your IDE, because the `html.dart` is not documented, since it mirrors `dart:io`
-2. It will import types incompatible with the original ones. An example:
+## Aditional information
+This package was created because I needed some cross-platform solution for our [future app](https://github.com/vise-maps/app).
+I found [universal_io](https://pub.dev/packages/universal_io). But there are two issues: the package does not seem to be
+mantained, and mainly &ndash; it does not work (on web). There are opened issues for a year without a response.
+
+Also that package has just copied code from Dart SDK (and has used `IOOverrides`) which is the worst possible way to use localStorage I would say:
+
+1. Dart SDK changes almost everyday and after a stable release, the code must be re-copied and re-edited
+2. The code will be big because of the `dart:io` library size. Why to include it twice?
+
+Well, I encourage you to fork this package, come with wider support; and meanwhile, I'll try to get some answers from the maintainers of `universal_io`.

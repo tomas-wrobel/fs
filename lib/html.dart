@@ -81,6 +81,9 @@ abstract class FileSystemEntity implements uber.FileSystemEntity {
 	}
 
 	@override
+	FileSystemEntity get absolute;
+
+	@override
 	bool get isAbsolute => uri.isAbsolute;
 
 	@override
@@ -370,7 +373,7 @@ class Directory extends FileSystemEntity implements uber.Directory {
 
 	static Directory get current => Directory._(_current);
 
-	static set current(Directory value) {
+	static set current(uber.Directory value) {
 		_current = _current.resolveUri(value.uri);
 	}
 
@@ -625,18 +628,18 @@ class File extends FileSystemEntity implements uber.File {
 	}
 
 	@override
-	Future<File> writeAsBytes(List<int> bytes, {dynamic mode = FileMode.write, bool flush = false}) {
+	Future<File> writeAsBytes(List<int> bytes, {uber.FileMode mode = FileMode.write, bool flush = false}) {
 		writeAsBytesSync(bytes, mode: mode, flush: flush);
 		return Future.value(this);
 	}
 
 	@override
-	void writeAsBytesSync(List<int> bytes, {dynamic mode = FileMode.write, bool flush = false}) {
+	void writeAsBytesSync(List<int> bytes, {uber.FileMode mode = FileMode.write, bool flush = false}) {
 		window.localStorage['${absolute.uri}'] = bytes.join('-');
 	}
 
 	@override
-	Future<File> writeAsString(String contents, {dynamic mode = FileMode.write, Encoding encoding = utf8, bool flush = false}) async {
+	Future<File> writeAsString(String contents, {uber.FileMode mode = FileMode.write, Encoding encoding = utf8, bool flush = false}) async {
 		return writeAsBytes(encoding.encode(contents), mode: mode, flush: flush);
 	}
 
