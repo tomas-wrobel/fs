@@ -10,6 +10,33 @@ This file system is for Dart & Flutter users, who wants cross-platform API
 
 
 ## Getting started
+First install:
+
+```sh
+$ dart pub add fs
+```
+
+or
+
+```sh
+$ flutter pub add fs
+```
+
+And then a little bit complicated import:
+```dart
+import 'package:fs/io.dart' if (dart.library.html) 'package:fs/html.dart';
+```
+
+I do not recommend the opposite way:
+
+```dart
+// BAD
+import 'package:fs/html.dart' if (dart.library.io) 'package:fs/io.dart';
+```
+
+for two reason:
+1. It won't import documentation in your IDE, because the `html.dart` is not documented, since it mirrors `dart:io`
+2. It will import types incompatible with the original ones. An example:
 
 
 ## Additional information

@@ -7,7 +7,23 @@
 /// It reflects the `dart:io` library. However, it's not the copy of that like `universal_io`.
 /// But unlike that package, it works! And it does not use the code of Dart team, which changes over time.
 /// 
-/// {@macro fs.support}
+/// {@template fs.support}
+/// # Supported classes
+/// * [File]
+/// * [FileSystemEntity]
+/// * [FileSystemEntityType]
+/// * [FileStat]
+/// * [FileMode],
+/// * [FileSystemEvent]
+/// * [FileSystemException]
+/// * [Directory]
+/// 
+/// ## Unsupported methods
+/// * [FileSystemEntity.resolveSymbolicLinks]
+/// * [FileSystemEntity.resolveSymbolicLinksSync],
+/// * [Directory.createTemp]
+/// * [Directory.createTempSync]
+/// {@endtemplate}
 /// 
 /// The support for these methods is planned for the future.
 /// The [Directory.createTemp] will use [window.sessionStorage] to store the temporary files.
