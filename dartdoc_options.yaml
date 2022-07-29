@@ -1,0 +1,4 @@
+link-to-source:
+  root: '.'
+  uriTemplate: 'https://github.com/vise-maps/fs/blob/v0.28.0/%f%#L%l%'
+favicon: web/favicon.svg
