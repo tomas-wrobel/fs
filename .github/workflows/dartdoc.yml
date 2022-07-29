@@ -13,4 +13,5 @@ jobs:
         run: dart pub get
       - name: Generate docs
         run: dart doc . --auto-include-dependencies --output docs
-      -
+      - name: Using custom domains
+        run: echo "fs.vise.sbs" >> docs/CNAME
