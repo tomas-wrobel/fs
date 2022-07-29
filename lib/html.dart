@@ -22,7 +22,7 @@
 library fs.html;
 
 
-import '../io/io.dart' if (dart.library.html) 'io_empty.dart' as uber;
+import 'io.dart' if (dart.library.html) 'src/io_empty.dart' as uber;
 import 'dart:typed_data';
 import 'dart:convert';
 import 'dart:async';

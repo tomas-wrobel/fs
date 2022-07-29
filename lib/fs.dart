@@ -21,4 +21,4 @@
 /// {@endtemplate}
 library fs;
 
-export 'src/io/io.dart' if (dart.library.html) 'src/html/html.dart';
+export 'html.dart' if (dart.library.io) 'io.dart';
