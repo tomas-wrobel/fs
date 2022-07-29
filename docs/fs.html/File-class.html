@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the File class from the fs.html library, for the Dart programming language.">
+  <title>File class - fs.html library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../"
+      data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">fs</a></li>
+    <li><a href="../fs.html/fs.html-library.html">fs.html</a></li>
+    <li class="self-crumb">File class</li>
+  </ol>
+  <div class="self-name">File</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+<h1><span class="kind-class">File</span> class 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+ 
+</h1></div>
+
+    
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+  <dt>Inheritance</dt>
+  <dd>
+    <ul class="gt-separated dark clazz-relationships">
+      <li><a href="https://api.dart.dev/stable/2.17.6/dart-core/Object-class.html">Object</a></li>
+        <li><a href="../fs.html/FileSystemEntity-class.html">FileSystemEntity</a></li>
+      <li>File</li>
+    </ul>
+  </dd>
+
+        
+  <dt>Implemented types</dt>
+  <dd>
+    <ul class="comma-separated clazz-relationships">
+        <li><a href="https://api.dart.dev/stable/2.17.6/dart-io/File-class.html">File</a></li>
+    </ul>
+  </dd>
+        
+
+
+
+        
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="File" class="callable">
+          <span class="name"><a href="../fs.html/File/File.html">File</a></span><span class="signature">(<span class="parameter" id="-param-path"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-core/String-class.html">String</a></span> <span class="parameter-name">path</span></span>)</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="absolute" class="property">
+  <span class="name"><a href="../fs.html/File/absolute.html">absolute</a></span>
+  <span class="signature">&#8594; <a href="../fs.html/File-class.html">File</a></span> 
+
+</dt>
+<dd>
+  A <a href="https://api.dart.dev/stable/2.17.6/dart-io/FileSystemEntity-class.html">FileSystemEntity</a> whose path is the absolute path of <a href="../fs.html/FileSystemEntity/path.html">path</a>.
+  <div class="features">read-only, override</div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="https://api.dart.dev/stable/2.17.6/dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features">read-only, inherited</div>
+
+</dd>
+
+        <dt id="isAbsolute" class="property inherited">
+  <span class="name"><a href="../fs.html/FileSystemEntity/isAbsolute.html">isAbsolute</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd class="inherited">
+  Whether this object's path is absolute.
+  <div class="features">read-only, inherited</div>
+
+</dd>
+
+        <dt id="parent" class="property inherited">
+  <span class="name"><a href="../fs.html/FileSystemEntity/parent.html">parent</a></span>
+  <span class="signature">&#8594; <a href="../fs.html/Directory-class.html">Directory</a></span> 
+
+</dt>
+<dd class="inherited">
+  The parent directory of this entity.
+  <div class="features">read-only, inherited</div>
+
+</dd>
+
+        <dt id="path" class="property inherited">
+  <span class="name"><a href="../fs.html/FileSystemEntity/path.html">path</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features">read-only, inherited</div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="https://api.dart.dev/stable/2.17.6/dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features">read-only, inherited</div>
+
+</dd>
+
+        <dt id="uri" class="property inherited">
+  <span class="name"><a href="../fs.html/FileSystemEntity/uri.html">uri</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-core/Uri-class.html">Uri</a></span> 
+
+</dt>
+<dd class="inherited">
+  A <a href="https://api.dart.dev/stable/2.17.6/dart-core/Uri-class.html">Uri</a> representing the file system entity's location.
+  <div class="features">final, inherited</div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="copy" class="callable">
+  <span class="name"><a href="../fs.html/File/copy.html">copy</a></span><span class="signature">(<wbr><span class="parameter" id="copy-param-newPath"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-core/String-class.html">String</a></span> <span class="parameter-name">newPath</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../fs.html/File-class.html">File</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Copies this file.
+  <div class="features">override</div>
+
+</dd>
+
+        <dt id="copySync" class="callable">
+  <span class="name"><a href="../fs.html/File/copySync.html">copySync</a></span><span class="signature">(<wbr><span class="parameter" id="copySync-param-newPath"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-core/String-class.html">String</a></span> <span class="parameter-name">newPath</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../fs.html/File-class.html">File</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Synchronously copies this file.
+  <div class="features">override</div>
+
+</dd>
+
+        <dt id="create" class="callable">
+  <span class="name"><a href="../fs.html/File/create.html">create</a></span><span class="signature">(<wbr><span class="parameter" id="create-param-recursive">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">recursive</span> = <span class="default-value">false</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../fs.html/File-class.html">File</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features">override</div>
+
+</dd>
+
+        <dt id="createSync" class="callable">
+  <span class="name"><a href="../fs.html/File/createSync.html">createSync</a></span><span class="signature">(<wbr><span class="parameter" id="createSync-param-recursive">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">recursive</span> = <span class="default-value">false</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="../fs.html/File-class.html">File</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features">override</div>
+
+</dd>
+
+        <dt id="delete" class="callable inherited">
+  <span class="name"><a href="../fs.html/FileSystemEntity/delete.html">delete</a></span><span class="signature">(<wbr><span class="parameter" id="delete-param-recursive">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">recursive</span> = <span class="default-value">false</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../fs.html/FileSystemEntity-class.html">FileSystemEntity</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Deletes this <code>FileSystemEntity</code>.
+  <div class="features">inherited</div>
+
+</dd>
+
+        <dt id="deleteSync" class="callable">
+  <span class="name"><a href="../fs.html/File/deleteSync.html">deleteSync</a></span><span class="signature">(<wbr><span class="parameter" id="deleteSync-param-recursive">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">recursive</span> = <span class="default-value">false</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="../fs.html/File-class.html">File</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Synchronously deletes this <a href="https://api.dart.dev/stable/2.17.6/dart-io/FileSystemEntity-class.html">FileSystemEntity</a>.
+  <div class="features">override</div>
+
+</dd>
+
+        <dt id="exists" class="callable inherited">
+  <span class="name"><a href="../fs.html/FileSystemEntity/exists.html">exists</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.17.6/dart-core/bool-class.html">bool</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Checks whether the file system entity with this path exists.
+  <div class="features">inherited</div>
+
+</dd>
+
+        <dt id="existsSync" class="callable inherited">
+  <span class="name"><a href="../fs.html/FileSystemEntity/existsSync.html">existsSync</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Synchronously checks whether the file system entity with this path
+exists.
+  <div class="features">inherited</div>
+
+</dd>
+
+        <dt id="lastAccessed" class="callable">
+  <span class="name"><a href="../fs.html/File/lastAccessed.html">lastAccessed</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.17.6/dart-core/DateTime-class.html">DateTime</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The last-accessed time of the file.
+  <div class="features">override</div>
+
+</dd>
+
+        <dt id="lastAccessedSync" class="callable">
+  <span class="name"><a href="../fs.html/File/lastAccessedSync.html">lastAccessedSync</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-core/DateTime-class.html">DateTime</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The last-accessed time of the file.
+  <div class="features">override</div>
+
+</dd>
+
+        <dt id="lastModified" class="callable">
+  <span class="name"><a href="../fs.html/File/lastModified.html">lastModified</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.17.6/dart-core/DateTime-class.html">DateTime</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Get the last-modified time of the file.
+  <div class="features">override</div>
+
+</dd>
+
+        <dt id="lastModifiedSync" class="callable">
+  <span class="name"><a href="../fs.html/File/lastModifiedSync.html">lastModifiedSync</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-core/DateTime-class.html">DateTime</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Get the last-modified time of the file.
+  <div class="features">override</div>
+
+</dd>
+
+        <dt id="length" class="callable">
+  <span class="name"><a href="../fs.html/File/length.html">length</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.17.6/dart-core/int-class.html">int</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The length of the file.
+  <div class="features">override</div>
+
+</dd>
+
+        <dt id="lengthSync" class="callable">
+  <span class="name"><a href="../fs.html/File/lengthSync.html">lengthSync</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The length of the file provided synchronously.
+  <div class="features">override</div>
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="https://api.dart.dev/stable/2.17.6/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a non-existent method or property is accessed.
+  <div class="features">inherited</div>
+
+</dd>
+
+        <dt id="open" class="callable">
+  <span class="name"><a href="../fs.html/File/open.html">open</a></span><span class="signature">(<wbr><span class="parameter" id="open-param-mode">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-io/FileMode-class.html">FileMode</a></span> <span class="parameter-name">mode</span> = <span class="default-value">FileMode.read</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.17.6/dart-io/RandomAccessFile-class.html">RandomAccessFile</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Opens the file for random access operations.
+  <div class="features">override</div>
+
+</dd>
+
+        <dt id="openRead" class="callable">
+  <span class="name"><a href="../fs.html/File/openRead.html">openRead</a></span><span class="signature">(<wbr><span class="parameter" id="openRead-param-start">[<span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">start</span>, </span><span class="parameter" id="openRead-param-end"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">end</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.17.6/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.17.6/dart-core/int-class.html">int</a></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Creates a new independent <a href="https://api.dart.dev/stable/2.17.6/dart-async/Stream-class.html">Stream</a> for the contents of this file.
+  <div class="features">override</div>
+
+</dd>
+
+        <dt id="openSync" class="callable">
+  <span class="name"><a href="../fs.html/File/openSync.html">openSync</a></span><span class="signature">(<wbr><span class="parameter" id="openSync-param-mode">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-io/FileMode-class.html">FileMode</a></span> <span class="parameter-name">mode</span> = <span class="default-value">FileMode.read</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-io/RandomAccessFile-class.html">RandomAccessFile</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Synchronously opens the file for random access operations.
+  <div class="features">override</div>
+
+</dd>
+
+        <dt id="openWrite" class="callable">
+  <span class="name"><a href="../fs.html/File/openWrite.html">openWrite</a></span><span class="signature">(<wbr><span class="parameter" id="openWrite-param-mode">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-io/FileMode-class.html">FileMode</a></span> <span class="parameter-name">mode</span> = <span class="default-value">FileMode.write</span>, </span><span class="parameter" id="openWrite-param-encoding"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-convert/Encoding-class.html">Encoding</a></span> <span class="parameter-name">encoding</span> = <span class="default-value">utf8</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-io/IOSink-class.html">IOSink</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Creates a new independent <a href="https://api.dart.dev/stable/2.17.6/dart-io/IOSink-class.html">IOSink</a> for the file.
+  <div class="features">override</div>
+
+</dd>
+
+        <dt id="readAsBytes" class="callable">
+  <span class="name"><a href="../fs.html/File/readAsBytes.html">readAsBytes</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.17.6/dart-typed_data/Uint8List-class.html">Uint8List</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Reads the entire file contents as a list of bytes.
+  <div class="features">override</div>
+
+</dd>
+
+        <dt id="readAsBytesSync" class="callable">
+  <span class="name"><a href="../fs.html/File/readAsBytesSync.html">readAsBytesSync</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-typed_data/Uint8List-class.html">Uint8List</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Synchronously reads the entire file contents as a list of bytes.
+  <div class="features">override</div>
+
+</dd>
+
+        <dt id="readAsLines" class="callable">
+  <span class="name"><a href="../fs.html/File/readAsLines.html">readAsLines</a></span><span class="signature">(<wbr><span class="parameter" id="readAsLines-param-encoding">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-convert/Encoding-class.html">Encoding</a></span> <span class="parameter-name">encoding</span> = <span class="default-value">utf8</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.17.6/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.17.6/dart-core/String-class.html">String</a></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Reads the entire file contents as lines of text using the given
+<a href="https://api.dart.dev/stable/2.17.6/dart-convert/Encoding-class.html">Encoding</a>.
+  <div class="features">override</div>
+
+</dd>
+
+        <dt id="readAsLinesSync" class="callable">
+  <span class="name"><a href="../fs.html/File/readAsLinesSync.html">readAsLinesSync</a></span><span class="signature">(<wbr><span class="parameter" id="readAsLinesSync-param-encoding">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-convert/Encoding-class.html">Encoding</a></span> <span class="parameter-name">encoding</span> = <span class="default-value">utf8</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.17.6/dart-core/String-class.html">String</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Synchronously reads the entire file contents as lines of text
+using the given <a href="https://api.dart.dev/stable/2.17.6/dart-convert/Encoding-class.html">Encoding</a>.
+  <div class="features">override</div>
+
+</dd>
+
+        <dt id="readAsString" class="callable">
+  <span class="name"><a href="../fs.html/File/readAsString.html">readAsString</a></span><span class="signature">(<wbr><span class="parameter" id="readAsString-param-encoding">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-convert/Encoding-class.html">Encoding</a></span> <span class="parameter-name">encoding</span> = <span class="default-value">utf8</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.17.6/dart-core/String-class.html">String</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Reads the entire file contents as a string using the given
+<a href="https://api.dart.dev/stable/2.17.6/dart-convert/Encoding-class.html">Encoding</a>.
+  <div class="features">override</div>
+
+</dd>
+
+        <dt id="readAsStringSync" class="callable">
+  <span class="name"><a href="../fs.html/File/readAsStringSync.html">readAsStringSync</a></span><span class="signature">(<wbr><span class="parameter" id="readAsStringSync-param-encoding">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-convert/Encoding-class.html">Encoding</a></span> <span class="parameter-name">encoding</span> = <span class="default-value">utf8</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Synchronously reads the entire file contents as a string using the
+given <a href="https://api.dart.dev/stable/2.17.6/dart-convert/Encoding-class.html">Encoding</a>.
+  <div class="features">override</div>
+
+</dd>
+
+        <dt id="rename" class="callable">
+  <span class="name"><a href="../fs.html/File/rename.html">rename</a></span><span class="signature">(<wbr><span class="parameter" id="rename-param-newPath"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-core/String-class.html">String</a></span> <span class="parameter-name">newPath</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../fs.html/File-class.html">File</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Renames this file system entity.
+  <div class="features">override</div>
+
+</dd>
+
+        <dt id="renameSync" class="callable">
+  <span class="name"><a href="../fs.html/File/renameSync.html">renameSync</a></span><span class="signature">(<wbr><span class="parameter" id="renameSync-param-newPath"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-core/String-class.html">String</a></span> <span class="parameter-name">newPath</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../fs.html/File-class.html">File</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Synchronously renames this file system entity.
+  <div class="features">override</div>
+
+</dd>
+
+        <dt id="resolveSymbolicLinks" class="callable inherited">
+  <span class="name"><a href="../fs.html/FileSystemEntity/resolveSymbolicLinks.html">resolveSymbolicLinks</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.17.6/dart-core/String-class.html">String</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Resolves the path of a file system object relative to the
+current working directory.
+  <div class="features">inherited</div>
+
+</dd>
+
+        <dt id="resolveSymbolicLinksSync" class="callable inherited">
+  <span class="name"><a href="../fs.html/FileSystemEntity/resolveSymbolicLinksSync.html">resolveSymbolicLinksSync</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Resolves the path of a file system object relative to the
+current working directory.
+  <div class="features">inherited</div>
+
+</dd>
+
+        <dt id="setLastAccessed" class="callable">
+  <span class="name"><a href="../fs.html/File/setLastAccessed.html">setLastAccessed</a></span><span class="signature">(<wbr><span class="parameter" id="setLastAccessed-param-time"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-core/DateTime-class.html">DateTime</a></span> <span class="parameter-name">time</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-async/Future-class.html">Future</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Modifies the time the file was last accessed.
+  <div class="features">override</div>
+
+</dd>
+
+        <dt id="setLastAccessedSync" class="callable">
+  <span class="name"><a href="../fs.html/File/setLastAccessedSync.html">setLastAccessedSync</a></span><span class="signature">(<wbr><span class="parameter" id="setLastAccessedSync-param-time"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-core/DateTime-class.html">DateTime</a></span> <span class="parameter-name">time</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Synchronously modifies the time the file was last accessed.
+  <div class="features">override</div>
+
+</dd>
+
+        <dt id="setLastModified" class="callable">
+  <span class="name"><a href="../fs.html/File/setLastModified.html">setLastModified</a></span><span class="signature">(<wbr><span class="parameter" id="setLastModified-param-time"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-core/DateTime-class.html">DateTime</a></span> <span class="parameter-name">time</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-async/Future-class.html">Future</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Modifies the time the file was last modified.
+  <div class="features">override</div>
+
+</dd>
+
+        <dt id="setLastModifiedSync" class="callable">
+  <span class="name"><a href="../fs.html/File/setLastModifiedSync.html">setLastModifiedSync</a></span><span class="signature">(<wbr><span class="parameter" id="setLastModifiedSync-param-time"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-core/DateTime-class.html">DateTime</a></span> <span class="parameter-name">time</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Synchronously modifies the time the file was last modified.
+  <div class="features">override</div>
+
+</dd>
+
+        <dt id="stat" class="callable inherited">
+  <span class="name"><a href="../fs.html/FileSystemEntity/stat.html">stat</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../fs.html/FileStat-class.html">FileStat</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Calls the operating system's <code>stat()</code> function on <a href="../fs.html/FileSystemEntity/path.html">path</a>.
+  <div class="features">inherited</div>
+
+</dd>
+
+        <dt id="statSync" class="callable inherited">
+  <span class="name"><a href="../fs.html/FileSystemEntity/statSync.html">statSync</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="../fs.html/FileStat-class.html">FileStat</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Synchronously calls the operating system's <code>stat()</code> function on <a href="../fs.html/FileSystemEntity/path.html">path</a>.
+  <div class="features">inherited</div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="https://api.dart.dev/stable/2.17.6/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features">inherited</div>
+
+</dd>
+
+        <dt id="watch" class="callable inherited">
+  <span class="name"><a href="../fs.html/FileSystemEntity/watch.html">watch</a></span><span class="signature">(<wbr><span class="parameter" id="watch-param-events">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-core/int-class.html">int</a></span> <span class="parameter-name">events</span> = <span class="default-value">FileSystemEvent.all</span>, </span><span class="parameter" id="watch-param-recursive"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">recursive</span> = <span class="default-value">false</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../fs.html/FileSystemEvent-class.html">FileSystemEvent</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Start watching the <a href="https://api.dart.dev/stable/2.17.6/dart-io/FileSystemEntity-class.html">FileSystemEntity</a> for changes.
+  <div class="features">inherited</div>
+
+</dd>
+
+        <dt id="writeAsBytes" class="callable">
+  <span class="name"><a href="../fs.html/File/writeAsBytes.html">writeAsBytes</a></span><span class="signature">(<wbr><span class="parameter" id="writeAsBytes-param-bytes"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.17.6/dart-core/int-class.html">int</a></span>&gt;</span></span> <span class="parameter-name">bytes</span>, </span><span class="parameter" id="writeAsBytes-param-mode">{<span class="type-annotation">dynamic</span> <span class="parameter-name">mode</span> = <span class="default-value">FileMode.write</span>, </span><span class="parameter" id="writeAsBytes-param-flush"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">flush</span> = <span class="default-value">false</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../fs.html/File-class.html">File</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Writes a list of bytes to a file.
+  <div class="features">override</div>
+
+</dd>
+
+        <dt id="writeAsBytesSync" class="callable">
+  <span class="name"><a href="../fs.html/File/writeAsBytesSync.html">writeAsBytesSync</a></span><span class="signature">(<wbr><span class="parameter" id="writeAsBytesSync-param-bytes"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.17.6/dart-core/int-class.html">int</a></span>&gt;</span></span> <span class="parameter-name">bytes</span>, </span><span class="parameter" id="writeAsBytesSync-param-mode">{<span class="type-annotation">dynamic</span> <span class="parameter-name">mode</span> = <span class="default-value">FileMode.write</span>, </span><span class="parameter" id="writeAsBytesSync-param-flush"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">flush</span> = <span class="default-value">false</span>}</span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Synchronously writes a list of bytes to a file.
+  <div class="features">override</div>
+
+</dd>
+
+        <dt id="writeAsString" class="callable">
+  <span class="name"><a href="../fs.html/File/writeAsString.html">writeAsString</a></span><span class="signature">(<wbr><span class="parameter" id="writeAsString-param-contents"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-core/String-class.html">String</a></span> <span class="parameter-name">contents</span>, </span><span class="parameter" id="writeAsString-param-mode">{<span class="type-annotation">dynamic</span> <span class="parameter-name">mode</span> = <span class="default-value">FileMode.write</span>, </span><span class="parameter" id="writeAsString-param-encoding"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-convert/Encoding-class.html">Encoding</a></span> <span class="parameter-name">encoding</span> = <span class="default-value">utf8</span>, </span><span class="parameter" id="writeAsString-param-flush"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">flush</span> = <span class="default-value">false</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../fs.html/File-class.html">File</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Writes a string to a file.
+  <div class="features">override</div>
+
+</dd>
+
+        <dt id="writeAsStringSync" class="callable">
+  <span class="name"><a href="../fs.html/File/writeAsStringSync.html">writeAsStringSync</a></span><span class="signature">(<wbr><span class="parameter" id="writeAsStringSync-param-contents"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-core/String-class.html">String</a></span> <span class="parameter-name">contents</span>, </span><span class="parameter" id="writeAsStringSync-param-mode">{<span class="type-annotation">dynamic</span> <span class="parameter-name">mode</span> = <span class="default-value">FileMode.write</span>, </span><span class="parameter" id="writeAsStringSync-param-encoding"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-convert/Encoding-class.html">Encoding</a></span> <span class="parameter-name">encoding</span> = <span class="default-value">utf8</span>, </span><span class="parameter" id="writeAsStringSync-param-flush"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">flush</span> = <span class="default-value">false</span>}</span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Synchronously writes a string to a file.
+  <div class="features">override</div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="https://api.dart.dev/stable/2.17.6/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.17.6/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features">inherited</div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="../index.html">fs</a></li>
+  <li><a href="../fs.html/fs.html-library.html">fs.html</a></li>
+  <li class="self-crumb">File class</li>
+</ol>
+
+
+    <h5>fs.html library</h5>
+    <ol>
+  <li class="section-title"><a href="../fs.html/fs.html-library.html#classes">Classes</a></li>
+  <li><a href="../fs.html/Directory-class.html">Directory</a></li>
+  <li><a href="../fs.html/File-class.html">File</a></li>
+  <li><a href="../fs.html/FileStat-class.html">FileStat</a></li>
+  <li><a href="../fs.html/FileSystemCreateEvent-class.html">FileSystemCreateEvent</a></li>
+  <li><a href="../fs.html/FileSystemDeleteEvent-class.html">FileSystemDeleteEvent</a></li>
+  <li><a href="../fs.html/FileSystemEntity-class.html">FileSystemEntity</a></li>
+  <li><a href="../fs.html/FileSystemEvent-class.html">FileSystemEvent</a></li>
+  <li><a href="../fs.html/FileSystemModifyEvent-class.html">FileSystemModifyEvent</a></li>
+  <li><a href="../fs.html/FileSystemMoveEvent-class.html">FileSystemMoveEvent</a></li>
+
+
+
+
+
+
+  <li class="section-title"><a href="../fs.html/fs.html-library.html#enums">Enums</a></li>
+  <li><a href="../fs.html/FileMode.html">FileMode</a></li>
+  <li><a href="../fs.html/FileSystemEntityType.html">FileSystemEntityType</a></li>
+
+
+  <li class="section-title"><a href="../fs.html/fs.html-library.html#exceptions">Exceptions</a></li>
+  <li><a href="../fs.html/FileSystemException-class.html">FileSystemException</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <ol>
+
+        <li class="section-title"><a href="../fs.html/File-class.html#constructors">Constructors</a></li>
+          <li><a href="../fs.html/File/File.html">File</a></li>
+
+
+    <li class="section-title">
+      <a href="../fs.html/File-class.html#instance-properties">Properties</a>
+    </li>
+    <li><a href="../fs.html/File/absolute.html">absolute</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.17.6/dart-core/Object/hashCode.html">hashCode</a></li>
+    <li class="inherited"><a href="../fs.html/FileSystemEntity/isAbsolute.html">isAbsolute</a></li>
+    <li class="inherited"><a href="../fs.html/FileSystemEntity/parent.html">parent</a></li>
+    <li class="inherited"><a href="../fs.html/FileSystemEntity/path.html">path</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.17.6/dart-core/Object/runtimeType.html">runtimeType</a></li>
+    <li class="inherited"><a href="../fs.html/FileSystemEntity/uri.html">uri</a></li>
+
+    <li class="section-title"><a href="../fs.html/File-class.html#instance-methods">Methods</a></li>
+    <li><a href="../fs.html/File/copy.html">copy</a></li>
+    <li><a href="../fs.html/File/copySync.html">copySync</a></li>
+    <li><a href="../fs.html/File/create.html">create</a></li>
+    <li><a href="../fs.html/File/createSync.html">createSync</a></li>
+    <li class="inherited"><a href="../fs.html/FileSystemEntity/delete.html">delete</a></li>
+    <li><a href="../fs.html/File/deleteSync.html">deleteSync</a></li>
+    <li class="inherited"><a href="../fs.html/FileSystemEntity/exists.html">exists</a></li>
+    <li class="inherited"><a href="../fs.html/FileSystemEntity/existsSync.html">existsSync</a></li>
+    <li><a href="../fs.html/File/lastAccessed.html">lastAccessed</a></li>
+    <li><a href="../fs.html/File/lastAccessedSync.html">lastAccessedSync</a></li>
+    <li><a href="../fs.html/File/lastModified.html">lastModified</a></li>
+    <li><a href="../fs.html/File/lastModifiedSync.html">lastModifiedSync</a></li>
+    <li><a href="../fs.html/File/length.html">length</a></li>
+    <li><a href="../fs.html/File/lengthSync.html">lengthSync</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.17.6/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+    <li><a href="../fs.html/File/open.html">open</a></li>
+    <li><a href="../fs.html/File/openRead.html">openRead</a></li>
+    <li><a href="../fs.html/File/openSync.html">openSync</a></li>
+    <li><a href="../fs.html/File/openWrite.html">openWrite</a></li>
+    <li><a href="../fs.html/File/readAsBytes.html">readAsBytes</a></li>
+    <li><a href="../fs.html/File/readAsBytesSync.html">readAsBytesSync</a></li>
+    <li><a href="../fs.html/File/readAsLines.html">readAsLines</a></li>
+    <li><a href="../fs.html/File/readAsLinesSync.html">readAsLinesSync</a></li>
+    <li><a href="../fs.html/File/readAsString.html">readAsString</a></li>
+    <li><a href="../fs.html/File/readAsStringSync.html">readAsStringSync</a></li>
+    <li><a href="../fs.html/File/rename.html">rename</a></li>
+    <li><a href="../fs.html/File/renameSync.html">renameSync</a></li>
+    <li class="inherited"><a href="../fs.html/FileSystemEntity/resolveSymbolicLinks.html">resolveSymbolicLinks</a></li>
+    <li class="inherited"><a href="../fs.html/FileSystemEntity/resolveSymbolicLinksSync.html">resolveSymbolicLinksSync</a></li>
+    <li><a href="../fs.html/File/setLastAccessed.html">setLastAccessed</a></li>
+    <li><a href="../fs.html/File/setLastAccessedSync.html">setLastAccessedSync</a></li>
+    <li><a href="../fs.html/File/setLastModified.html">setLastModified</a></li>
+    <li><a href="../fs.html/File/setLastModifiedSync.html">setLastModifiedSync</a></li>
+    <li class="inherited"><a href="../fs.html/FileSystemEntity/stat.html">stat</a></li>
+    <li class="inherited"><a href="../fs.html/FileSystemEntity/statSync.html">statSync</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.17.6/dart-core/Object/toString.html">toString</a></li>
+    <li class="inherited"><a href="../fs.html/FileSystemEntity/watch.html">watch</a></li>
+    <li><a href="../fs.html/File/writeAsBytes.html">writeAsBytes</a></li>
+    <li><a href="../fs.html/File/writeAsBytesSync.html">writeAsBytesSync</a></li>
+    <li><a href="../fs.html/File/writeAsString.html">writeAsString</a></li>
+    <li><a href="../fs.html/File/writeAsStringSync.html">writeAsStringSync</a></li>
+
+    <li class="section-title inherited"><a href="../fs.html/File-class.html#operators">Operators</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.17.6/dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    fs
+      1.0.0
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/script.js?v1"></script>
+
+
+
+</body>
+
+</html>
+
