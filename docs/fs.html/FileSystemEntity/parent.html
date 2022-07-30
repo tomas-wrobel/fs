@@ -71,7 +71,7 @@
   <pre class="language-dart"><code class="language-dart">@override
 Directory get parent {
 	final segments = uri.pathSegments;
-	if (segments.isEmpty) {
+	if (segments.isEmpty || (segments.first == &#39;&#39; &amp;&amp; segments.length == 1)) {
 		throw FileSystemException(&#39;Cannot get parent of root directory&#39;);
 	}
 	return Directory(segments.take(segments.length - 1).join(&#39;&#47;&#39;));
