@@ -1,6 +1,6 @@
 name: fs
 description: A dart:io's FileSystem available for web.
-version: 1.0.1
+version: 1.0.2
 homepage: https://fs.vise.sbs/
 repository: https://github.com/vise-maps/fs/
 

@@ -59,8 +59,17 @@ abstract class FileSystemEntity implements uber.FileSystemEntity {
 	);
 	int? _emitType;
 	bool _shouldEmit = false;
-
 	FileSystemEntity(this.uri);
+
+	static get isWatchSupported => true;
+
+	static bool isFileSync(String path) => typeSync(path) == FileSystemEntityType.file;
+	static bool isDirectorySync(String path) => typeSync(path) == FileSystemEntityType.directory;
+	static bool isLinkSync(String path) => typeSync(path) == FileSystemEntityType.link;
+
+	static Future<bool> isFile(String path) => Future.value(isFileSync(path));
+	static Future<bool> isDirectory(String path) => Future.value(isDirectorySync(path));
+	static Future<bool> isLink(String path) => Future.value(isLinkSync(path));
 
 	static FileSystemEntityType typeSync(String path) {
 		switch (window.localStorage['${_current.resolve(path)}']) {
@@ -79,9 +88,6 @@ abstract class FileSystemEntity implements uber.FileSystemEntity {
 	bool existsSync() {
 		return window.localStorage['${absolute.uri}'] != null;
 	}
-
-	@override
-	FileSystemEntity get absolute;
 
 	@override
 	bool get isAbsolute => uri.isAbsolute;
@@ -106,11 +112,11 @@ abstract class FileSystemEntity implements uber.FileSystemEntity {
 	@override
 	FileSystemEntity renameSync(String newPath);
 
-	Future<FileSystemEntity> create() {
-		return Future.value(createSync());
+	Future<FileSystemEntity> create({bool recursive = false}) {
+		return Future.value(createSync(recursive: recursive));
 	}
 
-	FileSystemEntity createSync() {
+	FileSystemEntity createSync({bool recursive = false}) {
 		if (window.localStorage[_statKey] == null) {
 			final now = DateTime.now();
 			_stat("accessed", now);
@@ -366,12 +372,12 @@ class FileStat implements uber.FileStat {
 
 class Directory extends FileSystemEntity implements uber.Directory {
 	Directory(String path) : super(Uri.directory(path));
-	Directory._(Uri uri) : super(uri);
+	Directory.fromUri(Uri uri) : super(uri);
 	
 	@override
-	Directory get absolute => Directory._(_current.resolveUri(uri));
+	Directory get absolute => Directory.fromUri(_current.resolveUri(uri));
 
-	static Directory get current => Directory._(_current);
+	static uber.Directory get current => Directory.fromUri(_current);
 
 	static set current(uber.Directory value) {
 		_current = _current.resolveUri(value.uri);
@@ -384,6 +390,7 @@ class Directory extends FileSystemEntity implements uber.Directory {
 	
 	@override
 	Directory createSync({bool recursive = false}) {
+		super.createSync(recursive: recursive);
 		if (!existsSync()) {
 			if (recursive) {
 				window.localStorage['${absolute.uri}'] = '{dir}'; 
@@ -458,9 +465,9 @@ class Directory extends FileSystemEntity implements uber.Directory {
 			for (final key in window.localStorage.keys)
 				if (key != storageKey && key.startsWith(storageKey))
 					if (window.localStorage[key] == '{dir}')
-						Directory._(Uri.parse(key, storageKey.length))
+						Directory.fromUri(Uri.parse(key, storageKey.length))
 					else
-						File._(Uri.parse(key, storageKey.length))
+						File.fromUri(Uri.parse(key, storageKey.length))
 		];
 	}
 	
@@ -470,10 +477,10 @@ class Directory extends FileSystemEntity implements uber.Directory {
 
 class File extends FileSystemEntity implements uber.File {
 	File(String path) : super(Uri.file(path));
-	File._(Uri uri) : super(uri);
+	File.fromUri(Uri uri) : super(uri);
 	
 	@override
-	File get absolute => File._(_current.resolveUri(uri));
+	File get absolute => File.fromUri(_current.resolveUri(uri));
 	
 	@override
 	Future<File> create({bool recursive = false}) {
@@ -482,7 +489,7 @@ class File extends FileSystemEntity implements uber.File {
 	
 	@override
 	File createSync({bool recursive = false}) {
-		super.createSync();
+		super.createSync(recursive: recursive);
 		if (recursive) {
 			window.localStorage['${absolute.uri}'] = ''; 
 		} else {
