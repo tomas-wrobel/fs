@@ -75,7 +75,7 @@ For a non-absolute path, the returned entity is absolute (<a href="../../fs.html
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">@override
-Directory get absolute =&gt; Directory._(_current.resolveUri(uri));</code></pre>
+Directory get absolute =&gt; Directory.fromUri(_current.resolveUri(uri));</code></pre>
 </section>
 
 </section>
@@ -103,6 +103,7 @@ Directory get absolute =&gt; Directory._(_current.resolveUri(uri));</code></pre>
 
         <li class="section-title"><a href="../../fs.html/Directory-class.html#constructors">Constructors</a></li>
           <li><a href="../../fs.html/Directory/Directory.html">Directory</a></li>
+          <li><a href="../../fs.html/Directory/Directory.fromUri.html">fromUri</a></li>
 
 
     <li class="section-title">
@@ -157,7 +158,7 @@ Directory get absolute =&gt; Directory._(_current.resolveUri(uri));</code></pre>
 <footer>
   <span class="no-break">
     fs
-      1.0.1
+      1.0.2
   </span>
 
   

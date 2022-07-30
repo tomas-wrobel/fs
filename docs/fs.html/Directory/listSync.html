@@ -95,9 +95,9 @@ List&lt;FileSystemEntity&gt; listSync({bool recursive = false, bool followLinks 
 		for (final key in window.localStorage.keys)
 			if (key != storageKey &amp;&amp; key.startsWith(storageKey))
 				if (window.localStorage[key] == &#39;{dir}&#39;)
-					Directory._(Uri.parse(key, storageKey.length))
+					Directory.fromUri(Uri.parse(key, storageKey.length))
 				else
-					File._(Uri.parse(key, storageKey.length))
+					File.fromUri(Uri.parse(key, storageKey.length))
 	];
 }</code></pre>
 </section>
@@ -125,6 +125,7 @@ List&lt;FileSystemEntity&gt; listSync({bool recursive = false, bool followLinks 
 
         <li class="section-title"><a href="../../fs.html/Directory-class.html#constructors">Constructors</a></li>
           <li><a href="../../fs.html/Directory/Directory.html">Directory</a></li>
+          <li><a href="../../fs.html/Directory/Directory.fromUri.html">fromUri</a></li>
 
 
     <li class="section-title">
@@ -179,7 +180,7 @@ List&lt;FileSystemEntity&gt; listSync({bool recursive = false, bool followLinks 
 <footer>
   <span class="no-break">
     fs
-      1.0.1
+      1.0.2
   </span>
 
   

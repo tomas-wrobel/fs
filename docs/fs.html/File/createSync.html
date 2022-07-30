@@ -72,7 +72,7 @@
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">@override
 File createSync({bool recursive = false}) {
-	super.createSync();
+	super.createSync(recursive: recursive);
 	if (recursive) {
 		window.localStorage[&#39;${absolute.uri}&#39;] = &#39;&#39;;
 	} else {
@@ -107,6 +107,7 @@ File createSync({bool recursive = false}) {
 
         <li class="section-title"><a href="../../fs.html/File-class.html#constructors">Constructors</a></li>
           <li><a href="../../fs.html/File/File.html">File</a></li>
+          <li><a href="../../fs.html/File/File.fromUri.html">fromUri</a></li>
 
 
     <li class="section-title">
@@ -181,7 +182,7 @@ File createSync({bool recursive = false}) {
 <footer>
   <span class="no-break">
     fs
-      1.0.1
+      1.0.2
   </span>
 
   

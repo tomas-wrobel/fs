@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the open method from the File class, for the Dart programming language.">
-  <title>open method - File class - fs.html library - Dart API</title>
+  <meta name="description" content="API docs for the File.fromUri constructor from Class File from the fs.html library, for the Dart programming language.">
+  <title>File.fromUri constructor - File - fs.html library - Dart API</title>
 
 
   
@@ -32,9 +32,9 @@
     <li><a href="../../index.html">fs</a></li>
     <li><a href="../../fs.html/fs.html-library.html">fs.html</a></li>
     <li><a href="../../fs.html/File-class.html">File</a></li>
-    <li class="self-crumb">open method</li>
+    <li class="self-crumb">File.fromUri constructor</li>
   </ol>
-  <div class="self-name">open</div>
+  <div class="self-name">File.fromUri</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
@@ -45,56 +45,22 @@
 
   <div id="dartdoc-main-content" class="main-content">
       <div>
-<h1><span class="kind-method">open</span> method 
+<h1><span class="kind-constructor">File.fromUri</span> constructor 
     <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
 </h1></div>
 
     <section class="multi-line-signature">
-      
-<div>
-  <ol class="annotation-list">
-    <li>@<a href="https://api.dart.dev/stable/2.17.6/dart-core/override-constant.html">override</a></li>
-  </ol>
-</div>
-
-<span class="returntype"><a href="https://api.dart.dev/stable/2.17.6/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.17.6/dart-io/RandomAccessFile-class.html">RandomAccessFile</a></span>&gt;</span></span>
-<span class="name ">open</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="open-param-mode">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-io/FileMode-class.html">FileMode</a></span> <span class="parameter-name">mode</span> = <span class="default-value">FileMode.read</span>}</span></li>
+      <span class="name ">File.fromUri</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="fromUri-param-uri"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.17.6/dart-core/Uri-class.html">Uri</a></span> <span class="parameter-name">uri</span></span></li>
 </ol>)
-
-      <div class="features">override</div>
-
     </section>
+
     
-<section class="desc markdown">
-  <p>Opens the file for random access operations.</p>
-<p>Returns a <code>Future&lt;RandomAccessFile&gt;</code> that completes with the opened
-random access file. <code>RandomAccessFile</code>s must be closed using the
-<a href="https://api.dart.dev/stable/2.17.6/dart-io/RandomAccessFile/close.html">RandomAccessFile.close</a> method.</p>
-<p>Files can be opened in three modes:</p>
-<ul>
-<li>
-<p><a href="https://api.dart.dev/stable/2.17.6/dart-io/FileMode/read-constant.html">FileMode.read</a>: open the file for reading.</p>
-</li>
-<li>
-<p><a href="https://api.dart.dev/stable/2.17.6/dart-io/FileMode/write-constant.html">FileMode.write</a>: open the file for both reading and writing and
-truncate the file to length zero. If the file does not exist the
-file is created.</p>
-</li>
-<li>
-<p><a href="https://api.dart.dev/stable/2.17.6/dart-io/FileMode/append-constant.html">FileMode.append</a>: same as <a href="https://api.dart.dev/stable/2.17.6/dart-io/FileMode/write-constant.html">FileMode.write</a> except that the file is
-not truncated.</p>
-</li>
-</ul>
-</section>
 
 
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">@override
-open({uber.FileMode mode = FileMode.read}) {
-	throw UnimplementedError();
-}</code></pre>
+  <pre class="language-dart"><code class="language-dart">File.fromUri(Uri uri) : super(uri);</code></pre>
 </section>
 
 
@@ -111,7 +77,7 @@ open({uber.FileMode mode = FileMode.read}) {
   <li><a href="../../index.html">fs</a></li>
   <li><a href="../../fs.html/fs.html-library.html">fs.html</a></li>
   <li><a href="../../fs.html/File-class.html">File</a></li>
-  <li class="self-crumb">open method</li>
+  <li class="self-crumb">File.fromUri constructor</li>
 </ol>
 
 
@@ -185,7 +151,7 @@ open({uber.FileMode mode = FileMode.read}) {
 
 </ol>
 
-  </div><!--/.sidebar-offcanvas-->
+  </div><!--/.sidebar-offcanvas-left-->
 
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
   </div><!--/.sidebar-offcanvas-->
