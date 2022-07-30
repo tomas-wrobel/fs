@@ -95,7 +95,7 @@ abstract class FileSystemEntity implements uber.FileSystemEntity {
 	@override
 	Directory get parent {
 		final segments = uri.pathSegments;
-		if (segments.isEmpty) {
+		if (segments.isEmpty || (segments.first == '' && segments.length == 1)) {
 			throw FileSystemException('Cannot get parent of root directory');
 		}
 		return Directory(segments.take(segments.length - 1).join('/'));
@@ -208,7 +208,11 @@ abstract class FileSystemEntity implements uber.FileSystemEntity {
 			...stat, 
 			type: '$dateOrNow'
 		});
-		parent._stat(type, dateOrNow);
+		try {
+			parent._stat(type, dateOrNow);
+		} catch (e) {
+			// no parent
+		}
 	}
 
 	String get _statKey {
@@ -392,10 +396,10 @@ class Directory extends FileSystemEntity implements uber.Directory {
 	Directory createSync({bool recursive = false}) {
 		super.createSync(recursive: recursive);
 		if (!existsSync()) {
-			if (recursive) {
+			if (!recursive) {
 				window.localStorage['${absolute.uri}'] = '{dir}'; 
 			} else {
-				for (Directory dir = this; !dir.existsSync() && dir.path != "/"; dir = dir.parent) {
+				for (Directory dir = this; !dir.existsSync() && dir.uri.pathSegments.isNotEmpty; dir = dir.parent) {
 					dir.createSync();
 				}
 			}
@@ -460,10 +464,14 @@ class Directory extends FileSystemEntity implements uber.Directory {
 	
 	@override
 	List<FileSystemEntity> listSync({bool recursive = false, bool followLinks = true}) {
-		final String storageKey = absolute.uri.toString();
+		final String storageKey = _current.resolveUri(uri).toString();
 		return [
 			for (final key in window.localStorage.keys)
-				if (key != storageKey && key.startsWith(storageKey))
+				if (
+					key != storageKey && 
+					key.startsWith(storageKey) && 
+					Uri.tryParse(key.replaceFirst(RegExp('/\$'), ''))?.pathSegments.length == absolute.uri.pathSegments.length + 1
+				)
 					if (window.localStorage[key] == '{dir}')
 						Directory.fromUri(Uri.parse(key, storageKey.length))
 					else
@@ -476,7 +484,7 @@ class Directory extends FileSystemEntity implements uber.Directory {
 }
 
 class File extends FileSystemEntity implements uber.File {
-	File(String path) : super(Uri.file(path));
+	File(String path) : super(Uri.parse(path));
 	File.fromUri(Uri uri) : super(uri);
 	
 	@override
@@ -490,10 +498,10 @@ class File extends FileSystemEntity implements uber.File {
 	@override
 	File createSync({bool recursive = false}) {
 		super.createSync(recursive: recursive);
-		if (recursive) {
+		if (!recursive) {
 			window.localStorage['${absolute.uri}'] = ''; 
 		} else {
-			for (Directory dir = parent; !dir.existsSync() && dir.path != "/"; dir = dir.parent) {
+			for (Directory dir = parent; !dir.existsSync() && dir.uri.pathSegments.isNotEmpty; dir = dir.parent) {
 				dir.createSync();
 			}
 		}
@@ -611,6 +619,7 @@ class File extends FileSystemEntity implements uber.File {
 
 	@override
 	String readAsStringSync({Encoding encoding = utf8}) {
+		print(absolute.uri.toString());
 		return encoding.decode(window.localStorage['${absolute.uri}']!.split('-').map(int.parse).toList());
 	}
 
