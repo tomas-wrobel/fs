@@ -470,7 +470,8 @@ class Directory extends FileSystemEntity implements uber.Directory {
 				if (
 					key != storageKey && 
 					key.startsWith(storageKey) && 
-					Uri.tryParse(key.replaceFirst(RegExp('/\$'), ''))?.pathSegments.length == absolute.uri.pathSegments.length
+					Uri.tryParse(key.replaceFirst(RegExp('/\$'), ''))?.pathSegments.length == 
+						('${absolute.uri}' == '/' ? 1 : absolute.uri.pathSegments.length)
 				)
 					if (window.localStorage[key] == '{dir}')
 						Directory.fromUri(uri.resolveUri(Uri.parse(key, storageKey.length)))
