@@ -73,10 +73,10 @@
   <pre class="language-dart"><code class="language-dart">@override
 File createSync({bool recursive = false}) {
 	super.createSync(recursive: recursive);
-	if (recursive) {
+	if (!recursive) {
 		window.localStorage[&#39;${absolute.uri}&#39;] = &#39;&#39;;
 	} else {
-		for (Directory dir = parent; !dir.existsSync() &amp;&amp; dir.path != &quot;&#47;&quot;; dir = dir.parent) {
+		for (Directory dir = parent; !dir.existsSync() &amp;&amp; dir.uri.pathSegments.isNotEmpty; dir = dir.parent) {
 			dir.createSync();
 		}
 	}

@@ -74,10 +74,10 @@
 Directory createSync({bool recursive = false}) {
 	super.createSync(recursive: recursive);
 	if (!existsSync()) {
-		if (recursive) {
+		if (!recursive) {
 			window.localStorage[&#39;${absolute.uri}&#39;] = &#39;{dir}&#39;;
 		} else {
-			for (Directory dir = this; !dir.existsSync() &amp;&amp; dir.path != &quot;&#47;&quot;; dir = dir.parent) {
+			for (Directory dir = this; !dir.existsSync() &amp;&amp; dir.uri.pathSegments.isNotEmpty; dir = dir.parent) {
 				dir.createSync();
 			}
 		}

@@ -90,10 +90,14 @@ directories, files, and links.</p>
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">@override
 List&lt;FileSystemEntity&gt; listSync({bool recursive = false, bool followLinks = true}) {
-	final String storageKey = absolute.uri.toString();
+	final String storageKey = _current.resolveUri(uri).toString();
 	return [
 		for (final key in window.localStorage.keys)
-			if (key != storageKey &amp;&amp; key.startsWith(storageKey))
+			if (
+				key != storageKey &amp;&amp;
+				key.startsWith(storageKey) &amp;&amp;
+				Uri.tryParse(key.replaceFirst(RegExp(&#39;&#47;\$&#39;), &#39;&#39;))?.pathSegments.length == absolute.uri.pathSegments.length + 1
+			)
 				if (window.localStorage[key] == &#39;{dir}&#39;)
 					Directory.fromUri(Uri.parse(key, storageKey.length))
 				else
