@@ -470,7 +470,7 @@ class Directory extends FileSystemEntity implements uber.Directory {
 				if (
 					key != storageKey && 
 					key.startsWith(storageKey) && 
-					Uri.tryParse(key.replaceFirst(RegExp('/\$'), ''))?.pathSegments.length == absolute.uri.pathSegments.length + 1
+					Uri.tryParse(key.replaceFirst(RegExp('/\$'), ''))?.pathSegments.length == absolute.uri.pathSegments.length
 				)
 					if (window.localStorage[key] == '{dir}')
 						Directory.fromUri(Uri.parse(key, storageKey.length))
@@ -619,7 +619,6 @@ class File extends FileSystemEntity implements uber.File {
 
 	@override
 	String readAsStringSync({Encoding encoding = utf8}) {
-		print(absolute.uri.toString());
 		return encoding.decode(window.localStorage['${absolute.uri}']!.split('-').map(int.parse).toList());
 	}
 
