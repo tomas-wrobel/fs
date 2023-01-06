@@ -1,11 +1,10 @@
-# Vise File System
+# Cross-Platform File System
 This file system is for Dart & Flutter users, who wants cross-platform API
 
 ## Features
-* cross-platform, working on web!
+* cross-platform, working on the web!
 * open to anyone
 	* you may need to fork the repo and customize it
-	* unlike Vise Maps themselves, this code is licensed under 3 clauses, which give you much more freedom
 * uses the same API as `dart:io`
 
 
@@ -33,14 +32,33 @@ or the opposite way:
 import 'package:fs/html.dart' if (dart.library.io) 'package:fs/io.dart';
 ```
 
-## Aditional information
-This package was created because I needed some cross-platform solution for our [future app](https://github.com/vise-maps/app).
-I found [universal_io](https://pub.dev/packages/universal_io). But there are two issues: the package does not seem to be
-mantained, and mainly &ndash; it does not work (on web). There are opened issues for a year without a response.
+## License
+BSD 3-Clause License
 
-Also that package has just copied code from Dart SDK (and has used `IOOverrides`) which is the worst possible way to use localStorage I would say:
+Copyright (c) 2023, Tomáš Wróbel
+All rights reserved.
 
-1. Dart SDK changes almost everyday and after a stable release, the code must be re-copied and re-edited
-2. The code will be big because of the `dart:io` library size. Why to include it twice?
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-Well, I encourage you to fork this package, come with wider support; and meanwhile, I'll try to get some answers from the maintainers of `universal_io`.
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its
+   contributors may be used to endorse or promote products derived from
+   this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
